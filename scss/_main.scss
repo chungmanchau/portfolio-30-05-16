@@ -1,181 +1,230 @@
 $green: hsl(500,53%,30%);
 $yellow: hsl(40,90%,60%);
 $red: hsl(0,87%,62%);
-$white: #FFF;
+$white: #fff;
 body {
 	overflow: hidden;
 }
 .main-title {
-    position: absolute;
-    top: 30%;
-    right: 0;
-    left: 0;
+	position: absolute;
+	top: 30%;
+	right: 0;
+	left: 0;
 
-    margin: 0 auto;
-    padding-left: 53px;
+	margin: 0 auto;
+	padding-left: 53px;
 
-    font-size: 40px;
-    font-weight: 400;
+	font-size: 40px;
+	font-weight: 400;
 
-    text-align: center;
-    letter-spacing: .5em;
-    text-transform: uppercase;
-    span {
-        color: $blue;
-    }
+	text-align: center;
+	letter-spacing: .5em;
+	text-transform: uppercase;
+	span {
+		color: $blue;
+	}
 }
 
 .logo {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
-    width: 10%;
-    height: 10%;
-    margin: auto auto;
+	width: 10%;
+	height: 10%;
+	margin: auto auto;
 
-    cursor: pointer;
-    &:hover {
-        .logo-hover {
-            opacity: .4;
-        }
-    }
-    &.active {
-    	img {
-            transform: rotate(0deg) translate(-5px, -5px);
-        }
-        .logo-hover {
-            opacity: 0;
-        }
-        .logo-active {
-        	opacity: 1;
-        }
-    }
-    img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+	cursor: pointer;
+	&:hover {
+		.logo-hover {
+			opacity: .4;
+		}
+	}
+	&.menu-open {
+		img {
+			transform: rotate(0deg);
+		}
+		.logo-hover {
+			opacity: 0;
+		}
+		.logo-active {
+			opacity: 1;
+		}
+		&.point1 {
+			img {
+				transform: rotate(-135deg);
+			}
+		}
+		&.point2 {
+			img {
+				transform: rotate(-45deg);
+			}
+		}
+		&.point3 {
+			img {
+				transform: rotate(45deg);
+			}
+		}
+		&.point4 {
+			img {
+				transform: rotate(-225deg);
+			}
+		}
 
-        display: block;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 
-        width: 90px;
-        height: 100%;
-        height: 90px;
-        margin: auto auto;
+		display: block;
 
-        transition: .4s opacity ease-in-out, .4s transform ease-in-out;
-        transform: rotate(-225deg) translate(-5px, -5px);
+		width: 90px;
+		height: 100%;
+		height: 90px;
+		margin: auto auto;
 
-        -webkit-backface-visibility: hidden;
-    }
-    .logo-hover {
-        opacity: .8;
-    }
-    .logo-active {
-        opacity: 0;
-    }
+		transition: .4s opacity ease-in-out, .4s transform ease-in-out;
+		transform: rotate(-225deg);
+
+		-webkit-backface-visibility: hidden;
+	}
+	.logo-hover {
+		opacity: .8;
+	}
+	.logo-active {
+		opacity: 0;
+	}
 }
 
 .layer {
-    position: absolute;
-    transition: all .4s ease-in-out;
-    .layer-title {
-    	color: $white;
-    	font-weight: 600;
-    	font-size: 26px;
-    	letter-spacing: 5px;
-    	padding: 20px;
-    	text-transform: uppercase;
-    	position: absolute;
-    }
-    &.layer1 {
-        z-index: 16;
-        top: 0;
+	position: absolute;
 
-        width: 100%;
-        height: 40vh;
+	transition: all .4s ease-in-out;
+	.layer-title {
+		position: absolute;
 
-        background: $red;
-        .layer-title {
-        	bottom: 0;
-        	left: 0;
-        }
-    }
-    &.layer2 {
-        z-index: 15;
-        top: 0;
-        right: 0;
+		padding: 20px;
 
-        width: 44%;
-        height: 100%;
+		font-size: 26px;
+		font-weight: 600;
 
-        background: $yellow;
-        .layer-title {
+		letter-spacing: 5px;
+		text-transform: uppercase;
+
+		color: $white;
+	}
+	&.layer1 {
+		z-index: 16;
+		top: 0;
+
+		width: 100%;
+		height: 40vh;
+
+		transform: translate(0, -100%);
+
+		background: $red;
+		.layer-title {
+			bottom: 0;
+			left: 0;
+		}
+	}
+	&.layer2 {
+		z-index: 15;
+		top: 0;
+		right: 0;
+
+		width: 44%;
+		height: 100%;
+
+		transform: translate(100%, 0);
+
+		background: $yellow;
+		.layer-title {
 			top: 45%;
 			left: 0;
-        }
-    }
-    &.layer3 {
-        z-index: 14;
-        bottom: 0;
-        left: 0;
+		}
+	}
+	&.layer3 {
+		z-index: 14;
+		bottom: 0;
+		left: 0;
 
-        display: block;
+		display: block;
 
-        width: 100%;
-        height: 40vh;
+		width: 100%;
+		height: 40vh;
 
-        background: $blue;
-        .layer-title {
+		transform: translate(0, 100%);
+
+		background: $blue;
+		.layer-title {
 			top: 0;
 			right: 0;
-        }
-    }
-    &.layer4 {
-        z-index: 13;
-        top: 0;
-        left: 0;
+		}
+	}
+	&.layer4 {
+		z-index: 13;
+		top: 0;
+		left: 0;
 
-        width: 44%;
-        height: 100%;
+		width: 44%;
+		height: 100%;
 
-        background: $green;
-        .layer-title {
-			right: 0;
+		transform: translate(-100%, 0);
+
+		background: $green;
+		.layer-title {
 			top: 45%;
-        }
-    }
-    &.closed {
-        &.layer1 {
-            transform: translate(0, -100%);
-        }
-        &.layer2 {
-            transform: translate(100%, 0);
-        }
-        &.layer3 {
-            transform: translate(0, 100%);
-        }
-        &.layer4 {
-            transform: translate(-100%, 0);
-        }
-    }
-    &.active {
-        &.layer1 {
-            transform: translate(44%, 0);
-        }
-        &.layer2 {
-            transform: translate(0, 0);
-        }
-        &.layer3 {
-            transform: translate(-44%, 0);
-        }
-        &.layer4 {
-            transform: translate(0, 0);
-        }
-    }
+			right: 0;
+		}
+	}
+	&.menu-open {
+		cursor: pointer;
+		&.layer1 {
+			transform: translate(44%, 0);
+		}
+		&.layer2 {
+			transform: translate(0, 0);
+		}
+		&.layer3 {
+			transform: translate(-44%, 0);
+		}
+		&.layer4 {
+			transform: translate(0, 0);
+		}
+	}
+	&.closed {
+		&.layer1 {
+			transform: translate(0, -100%);
+		}
+		&.layer2 {
+			transform: translate(100%, 0);
+		}
+		&.layer3 {
+			transform: translate(0, 100%);
+		}
+		&.layer4 {
+			transform: translate(-100%, 0);
+		}
+	}
+	&.active {
+		&.layer1 {
+			transform: translate(0%, 0);
+		}
+		&.layer2 {
+			transform: translate(0, 0);
+		}
+		&.layer3 {
+			transform: translate(0%, 0);
+		}
+		&.layer4 {
+			transform: translate(0, 0);
+		}
+	}
 }
