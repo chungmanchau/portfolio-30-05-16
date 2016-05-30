@@ -20,10 +20,10 @@ function toggleMenu() {
 		$('.layer3').removeClass('start');
 	} 
 	else if($('.layer').hasClass('menu-open')){
-		$('.layer, .logo, .main-title').removeClass('menu-open');
+		$('.layer, .logo, .main-title, .clouds').removeClass('menu-open');
 		$('.layer3').addClass('start');
 	} else {
-		$('.layer, .logo, .main-title').addClass('menu-open');
+		$('.layer, .logo, .main-title, .clouds').addClass('menu-open');
 		$('.layer3').removeClass('start');
 	}
 }

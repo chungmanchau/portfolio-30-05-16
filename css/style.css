@@ -357,11 +357,15 @@ body {
 .clouds {
   width: 100%;
   height: 50vh;
-  background: #0aa9df; }
+  opacity: 1;
+  background: #0aa9df;
+  transition: .5s opacity ease-in-out .2s; }
+  .clouds.menu-open {
+    opacity: 0; }
   .clouds .cloud {
     position: absolute;
     top: 0;
-    left: -1500px;
+    left: -1920px;
     width: 5760px;
     height: 50vh; }
     .clouds .cloud.cloud1 {
