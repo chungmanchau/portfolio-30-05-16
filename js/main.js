@@ -5,7 +5,6 @@ $(function() {
 
 	for (var i = 0; i < 5; i++) {
 		$('.layer' + i).click(function(){
-			if($('.layer' + i))
 			active(this.id);
 		});
 	}
@@ -27,10 +26,6 @@ function toggleMenu() {
 		$('.layer, .logo, .main-title').addClass('menu-open');
 		$('.layer3').removeClass('start');
 	}
-}
-
-function rotateLogo() {
-	
 }
 
 function active(id) {
