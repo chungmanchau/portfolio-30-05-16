@@ -5,6 +5,7 @@ $(function() {
 
 	for (var i = 0; i < 5; i++) {
 		$('.layer' + i).click(function(){
+			if($('.layer' + i))
 			active(this.id);
 		});
 	}
@@ -17,11 +18,14 @@ function toggleMenu() {
 		for (var i = 0; i < 5; i++) {
 			$('.logo').removeClass('point' + i);
 		}
+		$('.layer3').removeClass('start');
 	} 
 	else if($('.layer').hasClass('menu-open')){
-		$('.layer, .logo').removeClass('menu-open');
+		$('.layer, .logo, .main-title').removeClass('menu-open');
+		$('.layer3').addClass('start');
 	} else {
-		$('.layer, .logo').addClass('menu-open');
+		$('.layer, .logo, .main-title').addClass('menu-open');
+		$('.layer3').removeClass('start');
 	}
 }
 

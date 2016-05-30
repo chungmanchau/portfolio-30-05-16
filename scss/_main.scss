@@ -20,8 +20,12 @@ body {
 	text-align: center;
 	letter-spacing: .5em;
 	text-transform: uppercase;
+	transition: opacity 1s ease-in-out;
 	span {
 		color: $blue;
+	}
+	&.menu-open {
+		opacity: 0;
 	}
 }
 
@@ -40,7 +44,7 @@ body {
 	cursor: pointer;
 	&:hover {
 		.logo-hover {
-			opacity: .4;
+			opacity: .5;
 		}
 	}
 	&.menu-open {
@@ -55,22 +59,26 @@ body {
 		}
 		&.point1 {
 			img {
-				transform: rotate(-135deg);
+				transform: rotate(225deg);
+				-webkit-filter: hue-rotate(161deg);
 			}
 		}
 		&.point2 {
 			img {
-				transform: rotate(-45deg);
+				transform: rotate(315deg);
+				-webkit-filter: hue-rotate(216deg);
 			}
 		}
 		&.point3 {
 			img {
-				transform: rotate(45deg);
+				transform: rotate(-315deg);
+				-webkit-filter: hue-rotate(0deg);
 			}
 		}
 		&.point4 {
 			img {
-				transform: rotate(-225deg);
+				transform: rotate(135deg);
+				-webkit-filter: hue-rotate(280deg);
 			}
 		}
 
@@ -89,7 +97,7 @@ body {
 		height: 90px;
 		margin: auto auto;
 
-		transition: .4s opacity ease-in-out, .4s transform ease-in-out;
+		transition: .4s opacity ease-in-out, .4s transform ease-in-out, .4s -webkit-filter ease-in-out;
 		transform: rotate(-225deg);
 
 		-webkit-backface-visibility: hidden;
@@ -105,7 +113,7 @@ body {
 .layer {
 	position: absolute;
 
-	transition: all .4s ease-in-out;
+	transition: all .3s ease-in-out;
 	.layer-title {
 		position: absolute;
 
@@ -118,6 +126,7 @@ body {
 		text-transform: uppercase;
 
 		color: $white;
+		transition: .2s opacity ease-in-out;
 	}
 	&.layer1 {
 		z-index: 16;
@@ -163,6 +172,14 @@ body {
 		transform: translate(0, 100%);
 
 		background: $blue;
+		&.start {
+			height: 50vh;
+			transform: translate(0, 0);
+			opacity: .8;
+			.layer-title {
+				opacity: 0;
+			}
+		}
 		.layer-title {
 			top: 0;
 			right: 0;
