@@ -359,35 +359,86 @@ body {
   height: 50vh;
   transition: .5s opacity ease-in-out .2s;
   opacity: 1;
-  background: #0aa9df; }
+  -webkit-animation: skycolor 80s linear infinite;
+  animation: skycolor 80s linear infinite;
+  backface-visibility: hidden; }
   .clouds.menu-open {
     opacity: 0; }
+    .clouds.menu-open .cloud, .clouds.menu-open .stars, .clouds.menu-open svg {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+      -webkit-animation-play-state: paused !important;
+      /* Chrome, Safari, Opera */
+      animation-play-state: paused !important; }
   .clouds .cloud {
     position: absolute;
     top: 0;
     left: -1920px;
     width: 5760px;
-    height: 50vh; }
+    height: 50vh;
+    backface-visibility: hidden; }
     .clouds .cloud.cloud1 {
-      z-index: 3;
+      z-index: 7;
       -webkit-animation: drift 90s linear infinite;
       animation: drift 90s linear infinite;
-      background: url(../images/cloud1.png) left top repeat-x; }
+      background: url(../images/cloud1.png) left bottom repeat-x; }
     .clouds .cloud.cloud2 {
-      z-index: 2;
+      z-index: 6;
       -webkit-animation: drift 200s linear infinite;
       animation: drift 200s linear infinite;
-      background: url(../images/cloud2.png) left top repeat-x; }
+      background: url(../images/cloud2.png) left bottom repeat-x; }
     .clouds .cloud.cloud3 {
-      z-index: 1;
+      z-index: 5;
       -webkit-animation: drift 350s linear infinite;
       animation: drift 350s linear infinite;
-      background: url(../images/cloud3.png) left top repeat-x; }
+      background: url(../images/cloud3.png) left bottom repeat-x; }
+
+.stars {
+  position: absolute;
+  top: 310px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto auto;
+  z-index: 100;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  -webkit-animation: rotate 80s linear infinite;
+  backface-visibility: hidden; }
+  .stars svg {
+    position: absolute; }
+  .stars .sun {
+    transform: translateY(-60vh);
+    -webkit-filter: drop-shadow(0px 0 70px #fffc00);
+    filter: drop-shadow(0px 0 70px #fffc00); }
+  .stars .moon {
+    transform: translateY(60vh);
+    -webkit-filter: drop-shadow(0px 0 30px #fff);
+    filter: drop-shadow(0px 0 30px #fff); }
 
 @keyframes drift {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(1920px); } }
+@keyframes rotate {
+  0% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(390deg); } }
+@keyframes skycolor {
+  0% {
+    background: #0aa9df; }
+  25% {
+    background: #0a4493; }
+  50% {
+    background: #181818; }
+  75% {
+    background: #0796c7; }
+  100% {
+    background: #0aa9df; } }
 
 /*# sourceMappingURL=style.css.map */
