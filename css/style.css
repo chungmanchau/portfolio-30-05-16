@@ -193,6 +193,16 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #333; }
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
 body {
   overflow: hidden; }
 
@@ -384,6 +394,27 @@ body {
         text-align: center; }
         .content-layer.connect span a i {
           line-height: 70px; }
+  .content-layer.resume {
+    position: absolute;
+    right: 0;
+    width: 44%;
+    height: 100%;
+    color: #fff;
+    padding: 20px; }
+    .content-layer.resume .resume-item .fa {
+      display: inline-block;
+      border: 2px solid #fff;
+      padding: 5px;
+      border-radius: 50%;
+      margin-right: 5px; }
+    .content-layer.resume .resume-item h2 {
+      display: inline-block; }
+    .content-layer.resume .resume-item h3 {
+      font-style: italic;
+      display: inline-block; }
+    .content-layer.resume .resume-item p {
+      border-top: 1px solid #fff;
+      padding: 5px; }
 
 .clouds {
   width: 100%;
