@@ -283,23 +283,33 @@ body {
 	&.connect {
 		height: 40vh;
 		width: 100%;
-		bottom: 0;
+		bottom: 10vh;
 		left: 0;
 		text-align: center;
 		span {
 			text-align: center;
 			display: inline-block;
-			padding: 10px;
 			border: 2px solid $white;
-			margin: 10vh 5% 0;
+			margin: 0 5% 0;
 			width: 70px;
 			height: 70px;
+            transition: .2s all ease-in-out;
+            &:hover {
+                border: 5px solid rgba(255,255,255, .6);
+                background: $white;
+                a {
+                    i {
+                        line-height: 60px;
+
+                    }
+                }
+            }
 			a {
 				color: $white;
 				font-size: 40px;
 				text-align: center;
 				i {
-					line-height: 70px;
+					line-height: 68px;
 				}
 			}
 		}
@@ -312,31 +322,41 @@ body {
 		right: 0;
 		width: 44%;
 		height: 100%;
-		color: $white;
 		padding: 20px;
+        color: $white;
 		.resume-item {
 			.fa {
-				display: inline-block;
 				border: 2px solid $white;
 				padding: 5px;
 				border-radius: 50%;
 				margin-right: 5px;
 			}
-			h2 {
+			.title-item {
 				display: inline-block;
-			}
-			h3 {
-				font-style: italic;
-				display: inline-block;
+				margin-bottom: 10px;
+				padding-bottom: 0;
 			}
 			p {
 				border-top: 1px solid $white;
 				padding: 5px;
 			}
+            li {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
 		}
 	}
 	&.projects {
-
+        .center {
+             div {
+                //  overflow: hidden;
+                //  height: 250px;
+                 img {
+                    //  width: 100%;
+                 }
+             }
+        }
 	}
 }
 
