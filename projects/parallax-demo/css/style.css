@@ -1,0 +1,319 @@
+
+
+body {
+    overflow-x: hidden;
+  margin: 0;
+  font-family: 'roboto';
+  color: #333;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.2s ease-in;
+    background: none;
+}
+
+header.fixed {
+    /*background: red;*/
+    background: rgba(255, 255, 255, 0.9);
+    background-clip: content-box;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+header.fixed #logo {
+    width: 60px;
+}
+
+header.fixed .header-container {
+    padding: 10px 0px 7px;
+}
+
+.header-container {
+    transition: padding 0.2s ease-in;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+    z-index: 21;
+}
+
+header.fixed:before {
+    opacity: 0;
+}
+
+header:before {
+    background: linear-gradient(to top,transparent 0%,rgba(0,0,0,.8) 100%);
+    top: 0px;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    padding-top: 140px;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#logo {
+    display: inline-block;
+    margin: 0px 30px 0px 0;
+    transition: all .2s ease-in-out;
+    width: 82px;
+}
+header.fixed ul {
+    margin-top: 12px;
+}
+header ul {
+    float: right;
+    transition: all .1s ease-in-out;
+    margin-top: 20px;
+}
+
+header ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header.fixed ul li a {
+    color: #333;
+}
+header ul li a {
+    transition: all .1s ease-in-out;
+    color: #FFF;
+}
+
+header ul li a:hover {
+    color: #0073c5;
+}
+
+.parallax-board {
+    position: relative;
+    display: block;
+    height: 900px;
+    width: 100%;
+}
+
+.parallax-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    clip: rect(0,auto,auto,0);
+    height: 100%;
+    width: 100%;
+}
+.parallax-layer {
+    position: fixed;
+    top: 0;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-container:after {
+    background: linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.5) 100%);
+    bottom: 3px;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    padding-bottom: 30%;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+  .layer-0 {
+    background-image: url("http://www.sky.com/assets/2198f4b57c541f61af8f130f71831fa3.jpg");
+  }
+  .layer-1 {
+    background-image: url("http://www.sky.com/assets/286a970ca891e99f60d515048cd77e60.jpg");
+  }
+  .layer-2 {
+    background-image: url("http://www.sky.com/assets/67765114250ad6d67a0149f3b2480a63.jpg");
+  }
+
+.content-container  {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    height: 100%;
+    background: #415a6c;
+    text-align: center;
+    color: #333;
+    font-size: 25px;
+    width: 100%;
+    padding: 150px 0;
+    background: radial-gradient(ellipse at center,#fff 0,#e5e5eb 54%,#c9c7d1 71%);
+}
+
+.content-container:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    padding-bottom: 30%;
+    height: 0;
+    right: 0;
+    z-index: 20;
+    background: linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.2) 100%);
+}
+.content {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.content img {
+    float: left;
+}
+
+.content.alt img {
+    float: right;
+}
+
+.content .content-info {
+    margin: 150px 0px 100px 50px;
+    float: left;
+    width: 50%;
+      text-align: left;
+}
+  .content h1 {
+      margin-top: 0px;
+    color: #333;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  .content p {
+      line-height: 2;
+  }
+
+.glint-container {
+    width: 100%;
+    height: 3px;
+    margin-left: -200px;
+    margin-top: -3px;
+    background: none;
+    position: relative;
+    z-index: 20;
+}
+
+.glint {
+    position: absolute;
+    top: -18px;
+    height: 46px;
+    width: 446px;
+    background: url("http://www.sky.com/assets/da40e410d66160d75b6b033ef657d88f.png");
+}
+
+
+.tile-container {
+    width: 1550px;
+    margin: -150px auto 600px;
+    position: relative;
+    z-index: 40;
+}
+
+.tile-item {
+    float: left;
+    width: 46%;
+    margin: 1%;
+    padding: 5px;
+    background: rgba(255,255,255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+    cursor: pointer;
+    position: relative;
+}
+
+.tile-item:before {
+    position: absolute;
+    left: -130px;
+    top: -18px;
+    content: "";
+    background: url("http://www.sky.com/assets/da40e410d66160d75b6b033ef657d88f.png") no-repeat;
+    display: block;
+    width: 500px;
+    height: 48px;
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+.tile-item:after {
+    position: absolute;
+    right: -120px;
+    bottom: -25px;
+    content: "";
+    background: url("http://www.sky.com/assets/da40e410d66160d75b6b033ef657d88f.png") no-repeat;
+    display: block;
+    width: 500px;
+    height: 48px;
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.tile-item:hover:after {
+    transition: all 0.7s ease-in-out;
+    right: 320px;
+    opacity: 1;
+}
+
+.tile-item:hover:before {
+    transition: all 0.7s ease-in-out;
+    left: 400px;
+    opacity: 1;
+}
+
+.tile-item--media {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.tile-item--media img {
+    display: block;
+    transition: all 0.6s ease-in-out;
+    width: 100%;
+}
+
+.tile-item:hover .tile-item--media img {
+    transform: scale(1.07);
+}
+
+.tile-item--title {
+    padding: 20px 40px 120px;
+    background: #EEE;
+    transition: all .3s ease-in-out;
+}
+
+.tile-item--title h2 {
+    line-height: 1.5;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.tile-item:hover .tile-item--title {
+    background: #0073c5;
+    color: #FFF;
+}
