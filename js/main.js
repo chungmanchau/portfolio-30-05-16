@@ -1,17 +1,20 @@
 $(function() {
 	$('#logo, .active').click(function(){
 		toggleMenu();
+		resetContent();
 	});
 
 	$('.layer1').click(function(){
 		id = parseInt(this.id)
 		contentId = 3;
 		active(id, contentId);
+		$('.connect-container a').addClass("entrance");
 	});
 	$('.layer2').click(function(){
 		id = parseInt(this.id)
-		contentId = undefined;
+		contentId = 5;
 		active(id, contentId);
+		$('.about-container > *').addClass("entrance");
 	});
 	$('.layer3').click(function(){
 		id = parseInt(this.id)
@@ -73,6 +76,12 @@ function toggleMenu() {
 	}
 }
 
+function resetContent() {
+	$('.connect-container a').removeClass("entrance");
+	$('.about-container > *').removeClass("entrance");
+
+}
+
 function active(id, contentId) {
 	console.log(id);
 	$('#' + id + ', #' + contentId).addClass('active');
@@ -84,9 +93,7 @@ function active(id, contentId) {
 		if (n === 5) n = 1;
 		if (n === id || n === contentId) continue;
 		$('#'+n).removeClass('menu-open');
-		if(id === 2) {
-			$('#'+n).addClass('');
-		} else {
+		if(id !== 2) {
 			$('#'+n).addClass('closed');
 		}
 
