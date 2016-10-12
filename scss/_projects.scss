@@ -47,7 +47,10 @@
                     float: left;
                 }
                 .view {
-                    float: right;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
                 }
             }
             img {
@@ -57,7 +60,7 @@
                 width: 100%;
                 margin: 0 auto;
 
-                transition: .4s all ease;
+                transition: .4s all ease 0.2s;
 
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, .5);
             }
