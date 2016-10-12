@@ -29,46 +29,8 @@ $(function() {
 	slickJs();
 });
 
-function slickJs() {
-	$('.center').slick({
-		centerMode: true,
-		slidesToShow: 3,
-		infinite: true,
-		arrows: false,
-		focusOnSelect: true
-
-	});
-
-}
-
-function toggleMenu() {
-	if($('.layer').hasClass('active') ){
-
-		$('.content-layer').removeClass('show-content');
-		$('.layer').removeClass('active closed show-content');
-		$('.layer').addClass('menu-open');
-		for (var i = 0; i < 5; i++) {
-			$('.logo').removeClass('point' + i);
-		}
-		$('.layer3').removeClass('start');
-	}
-	else if($('.layer').hasClass('menu-open')){
-		$('.layer, .logo, .main-title, .clouds').removeClass('menu-open');
-		$('.layer3').addClass('start');
-	} else {
-		$('.layer, .logo, .main-title, .clouds').addClass('menu-open');
-		$('.layer3').removeClass('start');
-	}
-}
-
-function resetContent() {
-	$('.connect-container a').removeClass("entrance");
-	$('.about-container > *').removeClass("entrance");
-
-}
 
 function active(id, contentId) {
-	console.log(id);
 	$('#' + id + ', #' + contentId).addClass('active');
 	$('#' + contentId + ', [layer='+ contentId +']').addClass('show-content');
 	$('.logo').addClass('point' + id);
@@ -83,4 +45,43 @@ function active(id, contentId) {
 		}
 
 	}
-}
+};
+
+
+function slickJs() {
+	$('.center').slick({
+		centerMode: true,
+		slidesToShow: 3,
+		infinite: true,
+		arrows: false,
+		focusOnSelect: true
+
+	});
+
+};
+
+function toggleMenu() {
+	if($('.layer').hasClass('active') ){
+
+		$('.content-layer').removeClass('show-content');
+		$('.layer, .layers-container').removeClass('active closed show-content');
+		$('.layer , .layers-container').addClass('menu-open');
+		for (var i = 0; i < 5; i++) {
+			$('.logo').removeClass('point' + i);
+		}
+		$('.layer3').removeClass('start');
+	}
+	else if($('.layer').hasClass('menu-open')){
+		$('.layer, .layers-container, .logo, .main-title, .clouds').removeClass('menu-open');
+		$('.layer3').addClass('start');
+	} else {
+		$('.layer, .layers-container, .logo, .main-title, .clouds').addClass('menu-open');
+		$('.layer3').removeClass('start');
+	}
+};
+
+function resetContent() {
+	$('.connect-container a').removeClass("entrance");
+	$('.about-container > *').removeClass("entrance");
+
+};

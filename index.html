@@ -5,14 +5,18 @@
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 	<div class="wrapper">
-		<div class="main-title"><span>C</span>hung<span>M</span>an<span>C</span>hau</div>
-		<div class="logo" id="logo">
-			<img class="logo-hover" src="./images/logo-hover.png" alt="Chung Man Chau Logo">
-			<img class="logo-active" src="./images/logo.png" alt="Chung Man Chau Logo">
-		</div>
+		<header class="header">
+			<div class="main-title"><span>C</span>hung<span>M</span>an<span>C</span>hau</div>
+			<div class="logo" id="logo">
+				<img class="logo-hover" src="./images/logo-hover.png" alt="Chung Man Chau Logo">
+				<img class="logo-active" src="./images/logo.png" alt="Chung Man Chau Logo">
+			</div>
+		</header>
 		<section class="connect content-layer" layer="3">
 			<div class="connect-container">
 				<a target="_blank" href="ChungManChauCV.pdf"><span><i class="fa fa-print"></i></span></a>
@@ -25,7 +29,7 @@
 			<div class="about-container">
 				<img src="images/profile.jpg" alt="Chung Man Chau - Profile Image" class="profile">
 				<h1 class="name">Chung Man Chau</h1>
-				<p class="details">Keeping it short. Relaxed but hard working graduate from University of Kent, currently an Associate Software Developer at <a href="www.sky.com">Sky</a>. Looking to become a fully fledged front end developer in the years to come.</p>
+				<p class="details">Keeping it short. A relaxed yet dedicated graduate from University of Kent, currently an Associate Software Developer at <a href="www.sky.com">Sky</a>. Looking to become a fully fledged front end developer in the years to come.</p>
 			</div>
 		</section>
 
@@ -33,60 +37,52 @@
 			<div class="projects-container">
 				<button type="button" class="slick-prev">Previous</button>
 				<section class="center slider">
-					<div class="slide-container the-chef">
-						<img src="images/thecheflogo.jpg" alt="The Chef Restaurant" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
-						</div>
-					</div>
 					<div class="slide-container the-food-connection">
 						<img src="images/thefoodlogo.jpg" alt="The Food Connection" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="http://www.thefoodconnection.co.uk/" target="_blank" class="view">View Site</a>
 						</div>
 					</div>
 					<div class="slide-container three-dimensional-fitness">
 						<img src="images/fitnesslogo.jpg" alt="Three Dimensional Fitness" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="http://www.http://threedimensionalfitness.co.uk/.co.uk/" target="_blank" class="view">View Site</a>
+						</div>
+					</div>
+					<div class="slide-container the-chef">
+						<img src="images/thecheflogo.jpg" alt="The Chef Restaurant" />
+						<div class="btn-container">
+							<a href="http://www.thechefrestaurant.co.uk/" class="view">View Site</a>
 						</div>
 					</div>
 					<div class="slide-container time-zone">
 						<img src="images/timezone.jpg" alt="Time Zone App" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="projects/time-zone-app/index.html" target="_blank" class="view">View</a>
 						</div>
 					</div>
 					<div class="slide-container menu-concept">
 						<img src="images/menuconcept.jpg" alt="Menu Concept" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="http://codepen.io/chungman93/full/qZYPeo" target="_blank" class="view">View</a>
 						</div>
 					</div>
 					<div class="slide-container morphing-devices">
 						<img src="images/morphingdevices.jpg" alt="Morphing Devices" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="projects/morphing-devices/index.html" target="_blank" class="view">View</a>
 						</div>
 					</div>
 					<div class="slide-container parallax">
 						<img src="images/parallax.jpg" alt="This is Parallax" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="projects/parallax-demo/index.html" target="_blank" class="view">View</a>
 						</div>
 					</div>
 					<div class="slide-container iphone-mockup">
 						<img src="images/iphonemockup.jpg" alt="Iphone Mockup" />
-						<div class="btn-container clearfix">
-						<a class="learn">Learn More</a>
-						<a class="view">View Site</a>
+						<div class="btn-container">
+							<a href="http://codepen.io/chungman93/full/YqLERK/" target="_blank" class="view">View</a>
 						</div>
 					</div>
 				</section>
@@ -184,17 +180,19 @@
 				</ul>
 			</div>
 		</section>
-		<div class="layer layer1" id="1">
-			<span class="layer-title">Connect</span>
-		</div>
-		<div class="layer layer2" id="2">
-			<span class="layer-title">About Me</span>
-		</div>
-		<div class="layer layer3 start" id="3">
-			<span class="layer-title">Projects</span>
-		</div>
-		<div class="layer layer4" id="4">
-			<span class="layer-title">skills</span>
+		<div class="layers-container">
+			<div class="layer layer1" id="1">
+				<span class="layer-title">Connect</span>
+			</div>
+			<div class="layer layer2" id="2">
+				<span class="layer-title">About Me</span>
+			</div>
+			<div class="layer layer3 start" id="3">
+				<span class="layer-title">Projects</span>
+			</div>
+			<div class="layer layer4" id="4">
+				<span class="layer-title">skills</span>
+			</div>
 		</div>
 		<div class="clouds">
 			<div class="cloud cloud1"></div>
